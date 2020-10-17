@@ -1,0 +1,207 @@
+<DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Helvetica" rel="stylesheet" type="text/css">
+
+<style>
+	body {
+		max-width: 100%;
+	}
+	p,ul, input::placeholder, {
+		font-size: 1.2em;
+		line-height: 130%;
+		font-family: Helvetica;
+	}
+	input::placeholder {
+		color: var(--bleu);
+	}
+	:root {
+		--gris : whitesmoke;
+		--jaune : #fcd049;
+		--bleu : #89a9c1;
+	}
+
+	.nav-link {
+		color: black;
+		text-decoration: none;
+		
+	}
+	.nav-link:hover {
+		color: var(--bleu,grey);
+	}
+	#header{
+		position: fixed;
+		top: 0;
+		display: flex;
+		background-color:white;
+		padding: 0px 0px;
+		min-height: 70px;
+		justify-content:space-between;
+		flex-wrap: wrap;
+		align-items:center;
+		font-family : Helvetica, sans-serif;
+		z-index: 5;
+		width: 100%;
+	}
+	#streak {
+		margin-right: 60px;
+	}
+	#nav-bar, #branding {
+		display: flex;
+		flex-direction: row;
+		margin : 0;
+		float: right;
+		position: relative;
+	}
+	#nav-bar {
+		padding-right: 15px;
+	}
+	#header-img {
+		display : flex;
+		max-height : 25px;
+		margin: auto 10px auto 10px; 
+	}
+	h1,h2 {
+		margin: 0;
+	}
+	h2 {
+		font-family : Helvetica;
+	}
+	.titres {
+		font-family:Helvetica;
+		font-style: italic;
+		margin-top: 25px;
+	}
+	.nav-link {
+		margin: 0 10px 0 10px;
+	}
+	#video-bloc {
+		text-align: center;
+		margin-top: 70px;
+		max-width: 100%;
+		padding-bottom: 50%;
+		position: relative;
+		height: 0;
+		overflow: hidden;
+	}
+	.photo {
+		text-align:center;
+		position:relative;
+		z-index: 0;
+		width : 100%;
+		height:auto;
+	}
+	#fiche,.titres, ul{
+		position: relative;
+		z-index: 2;
+		max-width: 720px;
+		padding-left: 180px;
+	}
+	@media (max-width: 780px) {
+		#fiche, .titres, ul {
+			padding-left : 0;
+		}
+		.price {
+			padding: 0;
+		}
+	}
+	iframe {
+		position : absolute;
+		top: 0;
+		left: 0;
+		width : 100%;
+		height: 100%;
+	}
+	#cote-chaussure {
+		margin:-16% 0 -16% 0;
+		max-width: 100%;
+	}
+	#arriere-chaussure {
+		max-width: 70%;
+		margin: -5% 5% 0 5%;
+	}
+	#form, .price {
+		text-align: center;
+	}
+	input#email{
+		line-height: 28px;
+		border: 3px solid var(--jaune);
+	}
+	#submit {
+		height: 28px;
+		width: 80px;
+		border: 3px solid var(--bleu);
+		font-family: Helvetica;
+	}
+	#submit:hover {
+		background: var(--bleu);
+		color: var(--jaune);
+	}
+	#navbar {
+		position: relative;
+	}
+
+</style>
+<div id="navbar">
+<header id="header">
+	<div id="branding">
+	<img id="header-img" src="https://dynamic-web.fr/wp-content/uploads/2020/03/logo-nike.png" alt="swoosh">
+	<h1 id="streak">Nike Zoom Streak 7</h1>
+</div>
+	<nav id="nav-bar">
+	<h2><a href=#fiche class="nav-link">Fiche Technique</a></h2>
+	<h2><a href=#price class="nav-link">Prix</a></h2>
+	<h2><a href=#form class="nav-link">Commander</a></h2>
+</nav>
+</header>
+</div>
+
+<div id="video-bloc">
+<iframe id="video" width=100% height=100% src="https://www.youtube.com/embed/yXioATeZ3iU?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="fiche">
+	<h2 class="titres">Une pure racée !</h2>
+<p>Défiez votre chrono avec la chaussure Nike Air Zoom Streak 7 pour homme, ultra légère et réactive, elle vous propulse lors de vos entraînements et compétitions de running sur routes et chemins tracés.</p>
+<p>Issue de la gamme Nike Racing, son profil proche du sol vous assure une meilleure prise d'appui à l'avant ainsi qu'une phase d'attaque appréciable pour les adeptes de vitesse.</p>
+
+ 
+
+<p>Ce modèle vous apporte un retour d’énergie et un amorti de qualité grâce à l'unité Air Zoom, légère et souple, elle permet une réponse rapide à l'impact tout en procurant plus de dynamisme. Cet amorti vous assure une réception en douceur à chacun de vos appuis.</p>
+
+ 
+
+<p>Elle dispose d'une semelle extérieure qui offre une adhérence de qualité ainsi qu'une bonne résistance à l'abrasion. Le cambrion situé au médio-pied assure une propulsion maximale pour vous aider à atteindre votre meilleur temps.</p>
+
+ 
+
+<p>Pour maximiser le confort, elle est conçue d'une empeigne Flymesh pour une respirabilité accrue kilomètres après kilomètres. Son laçage Dynamic Flywire verrouille votre pied pour un maintien ajusté et sans gêne pour vos foulées.</p>
+</div>	
+<div class="photo">
+<img id="cote-chaussure" src="https://image.keller-sports.com/storage/products/9F/DA/9FDA5C22947861F5FBA1340CEE115672F5d0.1000x1000.jpeg" alt="cote-chaussure">
+</div>
+<h2 class="titres">Technologies</h2>
+<ul>
+	<li><strong>Unité Air Zoom</strong> : amorti réactif</li>
+	<li><strong>Phylon</strong> : légèreté</li>
+	<li><strong>Cambrion rigide inséré au médio-pied</strong> : propulsion</li>
+	<li><strong>Empeigne Flymesh</strong> : légèreté et ultra-respirabilité, confort </li>
+	<li><strong>Dynamic Flywire</strong> : laçage ajusté</li>
+	<li><strong>Doublure interne</strong> : enveloppe et maintien coup du pied</li>
+	<li><strong>Coque talon renforcée</strong> : stabilité</li>
+	<li><strong>Drop</strong> : 8mm</li>
+	<li><strong>Poids mesuré</strong> : 198g en taille 42</li>
+</ul>
+<div class="photo">
+<img id="arriere-chaussure" src="https://media.alltricks.com/hd/15476765e99d4117f8f37.11318166.jpg" alt="arriere-chaussure">
+</div>
+<p>
+	<h2 id="price" class="price">La nouvelle Nike Zoom Streak 7 sera disponible à partir du 1er Septembre 2020 au prix de<strong> 90 € </strong></h2>
+</p>
+<p>
+	<h2 class="price">Vous pouvez précommander dès aujourd'hui en entrant votre adresse email dans la barre ci-dessous.</h2>
+</p>
+<h2>
+<form id="form" action="https://freecodecamp.com/email-submit">
+	<label for="email">Email : <input  id="email" type="email" name="email" placeholder="streak7@nike.com" required></label>
+	<input id="submit" type="submit"></button>
+</form>
+</h2>
+</DOCTYPE>

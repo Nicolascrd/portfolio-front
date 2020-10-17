@@ -1,0 +1,394 @@
+<DOCTYPE html>
+
+<!-- Documentation pour la montre patek philipe 5320G-->
+<!-- A noter qu'il aurait sans doute été plus facile de faire un display: grid pour la barre latérale. Là c'est fait avec des paddings et des pixels et c'est plus complexe-->
+
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet" type="text/css">
+<style>
+	:root {
+		--carmin: #922632;
+		--gris: #807162;
+		--marron:#472e25;
+		--preparation:"http://nicolascrd.com/wp-content/uploads/2020/09/preparation.jpg";
+		--boitier:"http://nicolascrd.com/wp-content/uploads/2020/09/boitier.jpg;";
+		--mouvement:"http://nicolascrd.com/wp-content/uploads/2020/09/mouvement.jpg";
+		--correctionphases:"http://nicolascrd.com/wp-content/uploads/2020/09/correction-phases.jpg";
+		--correctionmois:"http://nicolascrd.com/wp-content/uploads/2020/09/correction-mois.jpg";
+		font-family: 'Noto Serif JP', serif;
+	}
+
+	h4 {
+		margin-block-start: 0;
+	}
+
+	.main-section {
+			margin-bottom: 150px;
+	}
+	.intercalaire {
+		color:var(--carmin);
+		font-size: 2em;
+		padding-left: 150px;
+
+	}
+	h3 {
+		text-transform:uppercase;
+	}
+	a {
+		color: inherit;
+		text-decoration: inherit;
+	}
+	a:hover {
+		color: var(--gris);
+	}
+
+	#navbar {
+		position: fixed;
+		left:0;
+		top: 0;
+		margin: 0;
+		padding-top: 40vh;	
+		max-height: 60vh;
+		background: var(--marron);
+		color: white;
+		overflow-y: scroll;
+	}
+
+	.menu {
+		font-size: 2em;
+		max-width: 250px;
+
+		padding-left: 50px;
+		padding-right: 35px;
+	}
+	#titre-doc {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		left:0;
+		top: 0;
+		z-index: 2;
+		color: white;
+		font-size: 1.2em;
+		min-height: 300px;
+		background: linear-gradient(var(--marron),var(--marron),transparent);
+		max-width: 300px;
+		text-align: center;
+	}
+	#intro {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 100px;
+	}
+	#horsmenu {
+		margin-left: 370px;
+		margin-top: 160px;
+	}
+	.retrecissement {
+		max-width: 450px;
+		max-height: 450px;
+		overflow: hidden;
+		float: right;	
+	}
+	#img-mouvement {
+		max-width: min(430px,60%);
+		float : right;
+	}
+	#img-boitier {
+		max-width: min(630px,60%);
+		padding-right: 80px;
+		float : left;
+		height:auto;
+	}
+	#img-correction-mois{
+		max-width: min(630px,50%);
+		padding-right: 80px;
+		float : left;
+		height:auto;
+	}
+	#img-poincon-pp {
+		width: 100px;
+	}
+
+	.retrecissement img {
+		max-height: 400px;
+		max-width: 450px;
+
+	}
+	p,ol,ul {
+		max-width: 780px;
+		text-align: justify;
+	}
+	h3 {
+		/*max-width: 780px;*/
+	}
+	.legende {
+		max-width: 100%;
+	}
+
+	@media (max-width: 1100px) {
+		p {
+			max-width: 740px;
+		}
+		#navbar {
+			position: static;
+			padding : 0;
+			display: flex;
+			direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			max-height: 40vh;
+			text-align: center;
+		}
+		.menu {
+			max-width: 100%;
+			width:100%;
+			padding: 0;
+		}
+		#titre-doc {
+			position: static;
+			display: flex;
+			background: transparent;
+			max-width: 100%;
+			color: black;
+			padding: 0;
+			min-height: 0;
+			color: white;
+		}
+		#horsmenu {
+			padding: 0;
+			margin: 0;
+			margin-top: 50px;
+		}
+	}
+	
+
+	</style>
+
+
+
+
+<nav id="navbar">
+	<header id="titre-doc"><h1><strong>Patek Philippe</strong> Calibre 324 S Q</h1></header>
+	<h4 class="menu"><a class="nav-link" href=#mouvement>Mouvement</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#boitier>Boitier</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#remontage>Remontage</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#mise_à_l&apos;heure>Mise à l'heure</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#quantième_perpétuel>Quantième Perpétuel</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#important>Important</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#préparation_aux_réglages>Préparation aux réglages</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#correction_de_la_date>Correction de la date</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#correction_du_mois_et_du_cycle_des_années_bissextiles>Correction du mois et du cycle des années bissextiles</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#correction_du_jour>Correction du jour</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#correction_des_phases_de_lune>Correction des phases de lune</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#certificat_d&apos;origine>Certificat d'origine</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#poinçon_patek_philippe>Poinçon Patek Philippe</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#contrôles>Contrôles</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#précision>Précision</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#étanchéité>Étanchéité</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#changement_de_fond>Changement de fond</a></h4>
+	<h4 class="menu"><a class="nav-link" href=#révision>Révision</a></h4>
+</nav>
+<section id="horsmenu">
+<head>
+	<p id="intro">
+	Avec la référence 5320G, Patek Philipe a créé un quantième perpétuel taillé pour l’éternité. Cette montre ne se contente pas d’afficher la date correcte pour les mois de 28, 30 et 31 jours, en tenant compte tous les quatre ans du 29 février des années bissextiles. Elle présente également un design si sobre et si intemporel qu’on peut y admirer à la fois le passé, le présent et l’avenir. Le cadran arbore le même visage avec lequel patek philipe a établi depuis 1941 l’archétype du quantième perpétuel: un double guichet jour/mois à 12 h et un cadran auxiliaire mariant quantième à aiguille et guichet des phases de lune à 6h. Des affichages complétés par deux petits guichets ronds pour l’indication jour/nuit et le cycle des années bissextiles. Le calibre 324 S Q à remontage automatique, avec spiral Spiromax® en Silinvar®, allie le meilleur de la tradition à la technique la plus moderne. Il est logé dans un boîtier en or gris au style «rétrocontemporain» doté d’attaches à triples godrons rapelant la légendaire référence 2405 des années 1950. La touche «vintage» est renforcée par un verre saphir de type «box» se détachant nettement de la lunette. Le fond en verre saphir permet d’admirer l’architecture et les finitions raffinées du mouvement, avec ses ponts dotés d’arêtes anglées et polies, ses Côtes de Genève et son rotor en or 21 carats orné d’une croix de Calatrava gravée.
+</p>
+</head>
+
+
+<main id="main-doc">
+	<section class="main-section" id="mouvement">
+		<header>
+			<img id="img-mouvement" class="responsiveimg" src="http://nicolascrd.com/wp-content/uploads/2020/09/mouvement.jpg" alt="mouvement">
+			<h3>mouvement</h3>
+		</header>
+		<ul>
+			<li style="color: var(--carmin),darkred">Calibre</li>
+			<li>Remontage automatique</li>
+			<li>Quantième perpétuel</li>
+		</ul>
+		<ul>
+			<li>Diamètre: 32mm</li>
+			<li>Épaisseur: 4,97mm</li>
+			<li>Nombre de composants: 367</li>
+			<li>Nombre de rubis: 29</li>
+			<li>Réserve de marche: min. 35 heures - max. 45 heures</li>
+			<li>Masse oscillante: rotor central en or 21 ct, remontage unidirectionnel</li>
+		</ul>
+		<ul>
+			<li>Balancier: Gyromax®</li>
+			<li>Fréquence: 28 800 alternances/heure (4 Hz)</li>
+			<li>Spiral: Spiromax®</li>
+			<li>Poinçon Patek Philippe</li>
+		</ul>
+	</section>
+	<section class="main-section" id="boitier">
+		<header>
+			<img id="img-boitier" class="responsiveimg" src="http://nicolascrd.com/wp-content/uploads/2020/09/boitier.jpg" alt="boitier">
+			<h3>boitier</h3>
+		</header>
+		<h4>Indications</h4>
+		<ol class="legende">
+			<li>Aiguille des heures</li>
+			<li>Aiguille des minutes</li>
+			<li>Aiguille des secondes</li>
+			<strong>Cadran Auxiliaire</strong>
+			<li>Date</li>
+			<strong>Guichets</strong>
+			<li>Jour</li>
+			<li>Mois</li>
+			<li>Phases de lune</li>
+			<li>Cycle des années bissextiles</li>
+			<li>Indication jour/nuit</li>
+		</ol>
+		<h4>Couronne</h4>
+		<ol class="legende">
+			<li>Remontage manuel</li>
+			<li>Mise à l'heure</li>
+		</ol>
+		<h4>Boutons correcteurs</h4>
+		<ol class="legende">
+			<li>Correction du jour</li>
+			<li>Correction de la date</li>
+			<li>Correction du mois et de l'année</li>
+			<li>Correction des phases de lune</li>
+		</ol>
+	</section>
+	<h2 class="intercalaire">Mode d'emploi</h2>
+	<section class="main-section" id="remontage">
+		<header>
+			<h3>remontage</h3>
+		</header>
+		<p>Votre montre est dotée d’un mouvement à remontage automatique. Ce sont les gestes de votre poignet qui, grâce à la masse oscillante, permettent d’armer le ressort de barillet et de stocker l’énergie. Hors du poignet et complètement remontée, votre montre bénéficie d’une réserve de marche de minimum 35 heures. Si elle s’est arrêtée suite à un temps de repos supérieur à la réserve de marche, remontez-la manuellement (environ 10 tours de couronne dans le sens des aiguilles d’une montre).</p>
+		<p>Votre montre compliquée munie d’un mouvement
+à remontage automatique est livrée avec un écrin rotatif. Si vous ne portez pas votre montre pendant quelque temps, placez-la dans cet écrin. Votre
+montre ne s’arrêtera pas grâce à la rotation du support et vous n’aurez donc pas besoin d’effectuer les réglages du quantième perpétuel lorsque vous la porterez à nouveau.</p>
+	</section>
+	<section class="main-section" id="mise_à_l&apos;heure">
+		<header><!-- On verra pour les accents si ça se valide -->
+			<h3>mise à l'heure</h3>
+		</header>
+		<p>L’heure se règle en tirant doucement la couronne et en déplaçant les aiguilles vers l’avant ou vers l’arrière. Une fois l’heure ajustée, n’oubliez pas de repousser la couronne contre le boîtier. L’indication jour/nuit, indexée sur l’affichage central des heures et des minutes, permet de distinguer les heures du jour et de la nuit (blanc = de 6h à 18h; bleu = de 18h à 6h). Si vous passez minuit en tournant les aiguilles dans le sens horaire, toutes les indications fournies par le calendrier seront modifiées en conséquence. Il est déconseillé d’effectuer une mise à l’heure en arrière au-delà de minuit, car cela déréglerait le quantième – sans risque toutefois d’endommager le mécanisme.</p>
+	</section>
+	<section class="main-section" id="quantième_perpétuel">
+		<header>
+			<h3>quantième perpétuel</h3>
+		</header>
+		<p>Le quantième perpétuel indique la date, le jour et le mois en tenant compte automatiquement des mois de 28, 29, 30 ou 31 jours; il passe donc directement, par exemple, du 30 septembre au 1er octobre ou du 28 février des années non bissextiles au 1er mars. Lors des années bissextiles, il indique aussi le 29 février et passe ensuite directement au 1er mars. La date, le jour et le mois sont complétés par une indication du cycle des années bissextiles ainsi qu’un affichage des phases de lune si précis qu’il lui faut 122 ans pour dévier d’un seul jour par rapport au véritable cycle lunaire. Si la montre est remontée quotidiennement, le quantième perpétuel fonc-tionnera sans réajustement jusqu’au 28 février de l’an 2100, année séculaire où le calendrier grégorien supprime exceptionnellement le 29 février.</p>
+	</section>
+	<section class="main-section" id="important">
+		<header>
+			<h3>important</h3>
+		</header>
+		<ul>
+			<li>Il est préférable d’effectuer le remontage et la mise à l’heure hors du poignet afin d’éviter les pressions latérales sur le tube de la couronne. Nous vous recommandons de n’utiliser que deux doigts et de faire levier avec l’ongle pour tirer la couronne. </li>
+			<li>Ne tirez jamais la couronne dans un environnement humide ou dans l’eau. L’étanchéité de votre montre n’est garantie qu’avec la couronne poussée contre le boîtier.</li>
+			<li>Pour actionner les boutons correcteurs, utilisez exclusivement le crayon de fonction fourni avec la montre. Tout autre outil risque d’endommager votre garde-temps.</li>
+			<li>Aucun réglage du calendrier ou des phases de lune ne doit être effectué entre 16h et 1h du matin.</li>
+			<li>Les réglages du calendrier doivent être impérativement effectués dans l’ordre indiqué ci-dessous:
+				<ol>
+					<li>Placer les aiguilles sur 6h du matin</li>
+					<li>Régler la date au 1er du mois</li>
+					<li>Corriger le mois et le cycle des années bissextiles</li>
+					<li>Corriger la date</li>
+					<li>Corriger le jour</li>
+					<li>Corriger les phases de lune</li>
+					<li>Effectuer les mises à l'heure</li>
+				</ol>
+			</li>
+		</ul>
+	</section>
+	<section class="main-section" id="préparation_aux_réglages">
+		<header>
+			<section class="retrecissement">
+			<img id="img-preparation" class="responsiveimg" src="http://nicolascrd.com/wp-content/uploads/2020/09/preparation.jpg" alt="preparation aux réglages">
+		</section>
+			<h3>préparation aux réglages</h3>
+		</header>
+		<ol>
+			<li>Si votre montre s’est arrêtée, il est impératif d’effectuer un remontage manuel avant toute correction ou manipulation (environ 10 tours de couronne dans le sens des aiguilles d’une montre).</li>
+			<li>Pour avoir la certitude d’effectuer les réglages dans la bonne plage horaire, réglez votre montre sur 6h du matin en prenant comme repère l’indication jour/nuit (9)(affichage blanc)</li>
+			<li>Avancez impérativement la date (4) au 1er du mois à l'aide du bouton correcteur (B) situé entre 11h et 12h.</li>
+		</ol>
+	</section>
+	<section class="main-section" id="correction_de_la_date">
+		<header>
+			<h3>correction de la date</h3>
+		</header>
+		<p>Pour corriger la date(4), pressez autant de fois que nécessaire sur le bouton correcteur(B) situé entre 12h et 12h, jusqu'à l'affichage de la date désirée.</p>
+	</section>
+	<section class="main-section" id="correction_du_mois_et_du_cycle_des_années_bissextiles">
+		<header>
+			<img id="img-correction-mois" src="http://nicolascrd.com/wp-content/uploads/2020/09/correction-mois.jpg" alt="correction-mois">
+			<h3>correction du mois et du cycle des années bissextiles</h3>
+		</header>
+		<p class="legende">Pour corriger simultanément ces deux affichages, (6) et (8), pressez autant de fois que nécessaire le bouton correcteur (C) situé entre 12h et 1h jusqu’à l’affichage du mois et du chiffre de l’année désirés (4 = année bissextile, 1 = 1re année après une année bissextile, 2 = 2e année après une année bissextile, 3 = 3e année après une année bissextile). Pour connaître le cycle des années bissextiles, vous pouvez consulter <a href="https://www.patek.com">notre site</a>.</p>
+	</section>
+	<section class="main-section" id="correction_du_jour">
+		<header>
+			<h3>correction du jour</h3>
+		</header>
+		<p>Pour corriger le jour (5), pressez autant de fois que nécessaire sur le bouton correcteur (A) situé entre 10h et 11h, jusqu'à l'affichage du jour désiré.</p>
+
+	</section>
+	<section class="main-section" id="correction_des_phases_de_lune">
+		<header>
+			<section class="retrecissement">
+			<img id="img-correction-phases" src="http://nicolascrd.com/wp-content/uploads/2020/09/correction-phases.jpg" alt="correction-phases">
+		</section>
+			<h3>correction des phases de lune</h3>
+		</header>
+		<p>À chaque pression sur le bouton correcteur (D) situé entre 6 h et 7 h, le disque de la lune progresse d’un jour vers une nouvelle phase. Commencez par faire avancer le disque lunaire jusqu’à ce que la lune (7) apparaisse au centre du guichet sous sa forme pleine. Consultez ensuite un almanach ou <a href="https://www.patek.com">notre site</a> pour déterminer le nombre de jours écoulés depuis la dernière pleine lune (y compris le jour du réglage). Pour positionner la lune sur sa phase exacte, pressez sur le bouton correcteur autant de fois qu’il y a de jours écoulés depuis la dernière pleine lune.</p>
+	</section>
+		<h2 class="intercalaire">Entretien</h2>
+	<section class="main-section" id="certificat_d&apos;origine">
+		<header>
+			<h3>certificat d'origine</h3>
+		</header>
+		<p>Votre montre Patek Philippe est accompagnée d’un certificat d’origine mentionnant notamment ses numéros de mouvement et de boîtier. Ce document doit être dûment daté et signé par le détaillant agréé Patek Philippe et obligatoirement complété à votre nom. Il atteste l’authenticité de votre garde-temps et fait office de garantie internationale, valable deux ans à partir de la date d’achat. Les numéros insectioniduels de boîtier et de mouvement de chaque montre sont archivés dans les livres d’établissement de la manufacture. En indiquant ces informations, vous pouvez vous inscrire dans le «registre des propriétaires» Patek Philippe afin de recevoir à titre gracieux le <i>Magazine International Patek Philippe</i>.</p>
+	</section>
+	<section class="main-section" id="poinçon_patek_philippe">
+		<header>
+			<h3>poinçon patek philippe</h3>
+		</header>
+		<p><img id="img-poincon-pp" src="http://static2.worldtempus.com/cache/wysiwyg/0/9/09_0327_pp_poincon1_2.jpg" alt="poiçon patek philippe">Label de qualité globale, le Poinçon Patek Philippe s’applique à l’ensemble de la montre finie, en incluant le mouvement, le boîtier, le cadran, les aiguilles, les poussoirs, les bracelets et les fermoirs, ainsi que tous les autres éléments concourant à la bonne marche ou à la perfection extérieure d’un garde-temps. Couvrant à la fois les aspects techniques, fonctionnels et esthétiques, il ne met pas seulement en valeur la bienfacture de la montre, mais aussi sa précision et sa fiabilité, ainsi que la qualité du service. Il intègre par là même tous les savoir-faire et signes distinctifs liés à la conception, à la fabrication et à l’entretien à long terme d’un garde-temps d’exception.</p>
+	</section>
+	<section class="main-section" id="contrôles">
+		<header>
+			<h3>contrôles</h3>
+		</header>
+		<p>Les mouvements et les montres finies sont soumis à une série de tests techniques et esthétiques portant notamment sur la précision, la vitesse de remontage, la réserve de marche, la fiabilité, l’étanchéité et l’aspect extérieur. Votre montre automatique, une fois assemblée, a fonctionné plusieurs semaines avant de quitter la manufacture et elle remplit parfaitement les exigences ultrarigoureuses du Poinçon Patek Philippe.</p>
+	</section>
+	<section class="main-section" id="précision">
+		<header>
+			<h3>précision</h3>
+		</header>
+		<p>La précision de marche des montres Patek Philippe est contrôlée à plusieurs étapes de la production, sur les mouvements seuls, puis emboîtés. Le contrôle final se déroule sur un simulateur de porter et il doit répondre aux normes de précision Patek Philippe suivantes:</p>
+		<p><i>Pour les calibres dont le diamètre est supérieur ou égal à 20 mm, la précision de marche doit être comprise dans la plage de [-3; +2] s/24 h.</i></p>
+		<p>La précision d’une montre se mesure à sa régularité. Un mouvement qui avance ou retarde est exact si cette avance ou ce retard journalier est constant. Cet écart peut être aisément corrigé. Le dernier test que devra subir votre montre sera celui de son fonctionnement à votre poignet. Les variations de position, de température ou de pression, les champs magnétiques (tels que ceux générés par la plupart des équipements électroniques, portiques de sécurité ou appareils électroménagers), les vibrations et bien d’autres facteurs peuvent affecter la précision. Si vous deviez constater un tel dérèglement, n’hésitez pas à déposer votre montre chez un détaillant agréé Patek Philippe ou dans un centre de service agréé, qui prendra les mesures nécessaires pour régler votre garde-temps selon vos exigences.</p>
+	</section>
+	<section class="main-section" id="étanchéité">
+		<header id="étanchéité">
+			<h3>étanchéité</h3>
+		</header>
+		<p>Votre montre est dotée de joints et de fermetures conçus pour protéger le mouvement de la poussière, de l'humidité et de tout risque de détérioration en cas d'immersion. Nous vous suggérons toutefois d'éviter qu'elle n'entre en contact avec l'eau si elle est munie d'un bracelt en cuir.</p>
+		<p>Il est recommandé de faire effectuer un test d'étanchéité sur votre montre chaque année. Cette procédure simple ne prendre que quelques minutes dans un point de vente équipé à cet effet.</p>
+	</section>
+	<section class="main-section" id="changement_de_fond">
+		<header>
+			<h3>changement de fond</h3>
+		</header>
+		<p>Si votre montre a été livrée avec deux fond interchangeables veuillez noter que seul un détaillant ou un centre de service agréé Patek Philippe est qualifié pour effectuer l'opération de changement du fond.</p>
+	</section>
+	<section class="main-section" id="révision">
+		<header>
+			<h3>révision</h3>
+		</header>
+		<p>Nous vous recommandons de faire réviser votre montre au moins une fois tous les trois à cinq ans. Il vous suffit pour cela de la remettre (éventuellement de l'envoyer) à un détaillant ou un centre de service agréé Patek Philippe. Vous aurez ainsi l'assurance qu'elle sera confiée à un horloger qualifié Patek Philippe, à Genève ou dans un centre de service agréé à travers le monde.</p>
+		<p>L'horloger démontera complètement le mouvement, nettoiera tous ses composants, le vérifiera et le lubrifiera lors du remontage. A près avoir testé son bon fonctionnement et procédé, si nécessaire, au réglage de l'échappement, il gardera encore la montre deux semaines supplémenaites afin de rélger la marche.L’ensemble du service peut prendre plusieurs semaines – le temps nécessaire pour réaliser tous les tests et contrôles permettant de répondre aux normes de qualité Patek Philippe.</p>
+		<p><i>Pour toute question concernant l’entretien de votre montre, ou pour obtenir l’adresse du centre de service agréé Patek Philippe le plus proche, veuillez contacter notre Service Client International, à Genève, ou consulter <a href="https:www.patek.com">notre site Internet</a></i>.</p>
+		<code>juste</code><code>pour</code><code>que</code><code> ça</code><code> passe</code>
+	</section>
+</main>
+</section>
