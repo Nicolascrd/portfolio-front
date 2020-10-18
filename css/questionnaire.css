@@ -1,0 +1,58 @@
+:root {
+    --rouge:rgba(255,28,0,1);
+    --jaune:rgb(255,228,94);
+    --jaunef:rgb(204,182,75);
+    --gris:rgb(222,222,222);
+    font-family: Roboto;
+}
+body {
+    margin: 0;
+}
+main {
+    background:var(--gris,lightgrey);
+    margin: 0 0 0 0;
+    padding: 0 0 12px 0;
+    border: 0;
+}
+#header {
+    text-align: center;
+    padding: 20px 0 20px 0;
+    background: var(--rouge,red);
+    color: white;
+    text-transform: none;
+}
+#email{
+    min-width: 200px;
+}
+input{
+    display: inline-block;
+}
+text-area{
+    
+}
+#title {
+
+}
+#description{
+    text-align:center;
+}
+#survey-form{
+    display:block;
+    padding: 10px 25px 10px 25px;
+    margin: 12px auto 12px auto;
+    text-align: justify;
+    line-height: 3em;
+    background: white;
+    max-width : 500px;
+    }
+#number {
+    min-width: 200px;
+}
+button {
+    background : var(--jaune,yellow);
+    margin: 10px 0 0 0;
+    align-self: right;
+}
+button:hover{
+    background: var(--jaunef, yellow);
+}

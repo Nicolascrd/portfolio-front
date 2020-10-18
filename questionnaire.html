@@ -1,76 +1,17 @@
-<DOCTYPE html>
+<!doctype html>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-<style>
-	:root {
-		--rouge:rgba(255,28,0,1);
-		--jaune:rgb(255,228,94);
-		--jaunef:rgb(204,182,75);
-		--gris:rgb(222,222,222);
-		font-family: Roboto;
-	}
-	body {
-		margin: 0;
-	}
-	main {
-		background:var(--gris,lightgrey);
-		margin: 0 0 0 0;
-		padding: 0 0 12px 0;
-		border: 0;
-	}
-	#header {
-		text-align: center;
-		padding: 20px 0 20px 0;
-		background: var(--rouge,red);
-		color: white;
-		text-transform: none;
-	}
-	#email{
-		min-width: 200px;
-	}
-	input{
-		display: inline-block;
-	}
-	text-area{
-		
-	}
-	#title {
-
-	}
-	#description{
-		text-align:center;
-	}
-	#survey-form{
-		display:block;
-		padding: 10px 25px 10px 25px;
-		margin: 12px auto 12px auto;
-		text-align: justify;
-		line-height: 3em;
-		background: white;
-		max-width : 500px;
-		}
-	#number {
-		min-width: 200px;
-	}
-	button {
-		background : var(--jaune,yellow);
-		margin: 10px 0 0 0;
-		align-self: right;
-	}
-	button:hover{
-		background: var(--jaunef, yellow);
-	}
-</style>
+	<link rel="stylesheet" href="css/questionnaire.css">
 <main>
 <header id="header">
-<h1 id=title>Nous avons besoin de vous !</h1>
+<h1 id="title">Nous avons besoin de vous !</h1>
 
 </header>
 <form id="survey-form">
 	<h2 id="description">Laissez nous ici vos suggestions pour Marketing Mania</h2>
-	Votre Nom : <label for="name-label"><input id="name" type="text" Placeholder="Stan Leloup" required=""></label><br>
-	Vous êtes : <label for="sexe-label"><input id="sexe" value="homme" type="radio" name="homme-femme">un homme
-		<input id="sexe" value="femme" type="radio" name="homme-femme">une femme</label><br>
-	Email : <label for="email-label"><input id="email" type="email" placeholder="bonjour@marketingmania.fr" required><br>
+	Votre Nom : <label for="name-label"><input id="name" type="text" placeholder="Stan Leloup" required=""></label><br>
+	Vous êtes : <label for="sexe-label"><input id="homme" value="homme" type="radio" name="homme-femme">un homme
+		<input id="femme" value="femme" type="radio" name="homme-femme">une femme</label><br>
+	Email : <label for="email-label"><input id="email" type="email" placeholder="bonjour@marketingmania.fr" required></label><br>
 	
 		Numéro de téléphone : <label for="number-label"><input id="number" type="number" placeholder="0678901234" min="0" max="0999999999" ></label>
 		<br>
@@ -82,16 +23,15 @@
 		</select><br>
 		<div class="liste">
 		<label for="aime">Vous aimez quand je parle de :</label>
-		<input id="aime" value="psy" type="checkbox" name="aime">Psychologie humaine</label>
-		<input id="aime" value="pop" type="checkbox" name="aime">Pop culture</label>
-		<input id="aime" value="series" type="checkbox" name="aime">Séries et Films</label>
-		<input id="aime" value="copy" type="checkbox" name="aime">Copywriting</label>
-		<input id="aime" value="prod" type="checkbox" name="aime">Productivité</label>
-		<br>
+		<input id="psy" value="psy" type="checkbox" name="aime">Psychologie humaine
+		<input id="pop" value="pop" type="checkbox" name="aime">Pop culture
+		<input id="series" value="series" type="checkbox" name="aime">Séries et Films
+		<input id="copy" value="copy" type="checkbox" name="aime">Copywriting
+		<input id="prod" value="prod" type="checkbox" name="aime">Productivité
+			</div>
 		<label for="suggestion">Une chose dont vous aimeriez que je parle en particulier ?</label>
 		<textarea id="suggestion" type="text" name="suggestions" placeholder="Vos suggestions vont là !">
 		</textarea><br>
 		<button type="submit">Envoyer le formulaire</button>
 	</form>
 </main>
-</DOCTYPE>

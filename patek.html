@@ -1,170 +1,12 @@
-<DOCTYPE html>
+<!doctype html>
 
 <!-- Documentation pour la montre patek philipe 5320G-->
 <!-- A noter qu'il aurait sans doute été plus facile de faire un display: grid pour la barre latérale. Là c'est fait avec des paddings et des pixels et c'est plus complexe-->
 
 
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet" type="text/css">
-<style>
-	:root {
-		--carmin: #922632;
-		--gris: #807162;
-		--marron:#472e25;
-		--preparation:"http://nicolascrd.com/wp-content/uploads/2020/09/preparation.jpg";
-		--boitier:"http://nicolascrd.com/wp-content/uploads/2020/09/boitier.jpg;";
-		--mouvement:"http://nicolascrd.com/wp-content/uploads/2020/09/mouvement.jpg";
-		--correctionphases:"http://nicolascrd.com/wp-content/uploads/2020/09/correction-phases.jpg";
-		--correctionmois:"http://nicolascrd.com/wp-content/uploads/2020/09/correction-mois.jpg";
-		font-family: 'Noto Serif JP', serif;
-	}
 
-	h4 {
-		margin-block-start: 0;
-	}
-
-	.main-section {
-			margin-bottom: 150px;
-	}
-	.intercalaire {
-		color:var(--carmin);
-		font-size: 2em;
-		padding-left: 150px;
-
-	}
-	h3 {
-		text-transform:uppercase;
-	}
-	a {
-		color: inherit;
-		text-decoration: inherit;
-	}
-	a:hover {
-		color: var(--gris);
-	}
-
-	#navbar {
-		position: fixed;
-		left:0;
-		top: 0;
-		margin: 0;
-		padding-top: 40vh;	
-		max-height: 60vh;
-		background: var(--marron);
-		color: white;
-		overflow-y: scroll;
-	}
-
-	.menu {
-		font-size: 2em;
-		max-width: 250px;
-
-		padding-left: 50px;
-		padding-right: 35px;
-	}
-	#titre-doc {
-		position: fixed;
-		display: flex;
-		justify-content: center;
-		left:0;
-		top: 0;
-		z-index: 2;
-		color: white;
-		font-size: 1.2em;
-		min-height: 300px;
-		background: linear-gradient(var(--marron),var(--marron),transparent);
-		max-width: 300px;
-		text-align: center;
-	}
-	#intro {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 100px;
-	}
-	#horsmenu {
-		margin-left: 370px;
-		margin-top: 160px;
-	}
-	.retrecissement {
-		max-width: 450px;
-		max-height: 450px;
-		overflow: hidden;
-		float: right;	
-	}
-	#img-mouvement {
-		max-width: min(430px,60%);
-		float : right;
-	}
-	#img-boitier {
-		max-width: min(630px,60%);
-		padding-right: 80px;
-		float : left;
-		height:auto;
-	}
-	#img-correction-mois{
-		max-width: min(630px,50%);
-		padding-right: 80px;
-		float : left;
-		height:auto;
-	}
-	#img-poincon-pp {
-		width: 100px;
-	}
-
-	.retrecissement img {
-		max-height: 400px;
-		max-width: 450px;
-
-	}
-	p,ol,ul {
-		max-width: 780px;
-		text-align: justify;
-	}
-	h3 {
-		/*max-width: 780px;*/
-	}
-	.legende {
-		max-width: 100%;
-	}
-
-	@media (max-width: 1100px) {
-		p {
-			max-width: 740px;
-		}
-		#navbar {
-			position: static;
-			padding : 0;
-			display: flex;
-			direction: row;
-			flex-wrap: wrap;
-			width: 100%;
-			max-height: 40vh;
-			text-align: center;
-		}
-		.menu {
-			max-width: 100%;
-			width:100%;
-			padding: 0;
-		}
-		#titre-doc {
-			position: static;
-			display: flex;
-			background: transparent;
-			max-width: 100%;
-			color: black;
-			padding: 0;
-			min-height: 0;
-			color: white;
-		}
-		#horsmenu {
-			padding: 0;
-			margin: 0;
-			margin-top: 50px;
-		}
-	}
-	
-
-	</style>
-
+<link rel="stylesheet" href="css/patek.css">
 
 
 
@@ -191,9 +33,9 @@
 </nav>
 <section id="horsmenu">
 <head>
-	<p id="intro">
+	<title>
 	Avec la référence 5320G, Patek Philipe a créé un quantième perpétuel taillé pour l’éternité. Cette montre ne se contente pas d’afficher la date correcte pour les mois de 28, 30 et 31 jours, en tenant compte tous les quatre ans du 29 février des années bissextiles. Elle présente également un design si sobre et si intemporel qu’on peut y admirer à la fois le passé, le présent et l’avenir. Le cadran arbore le même visage avec lequel patek philipe a établi depuis 1941 l’archétype du quantième perpétuel: un double guichet jour/mois à 12 h et un cadran auxiliaire mariant quantième à aiguille et guichet des phases de lune à 6h. Des affichages complétés par deux petits guichets ronds pour l’indication jour/nuit et le cycle des années bissextiles. Le calibre 324 S Q à remontage automatique, avec spiral Spiromax® en Silinvar®, allie le meilleur de la tradition à la technique la plus moderne. Il est logé dans un boîtier en or gris au style «rétrocontemporain» doté d’attaches à triples godrons rapelant la légendaire référence 2405 des années 1950. La touche «vintage» est renforcée par un verre saphir de type «box» se détachant nettement de la lunette. Le fond en verre saphir permet d’admirer l’architecture et les finitions raffinées du mouvement, avec ses ponts dotés d’arêtes anglées et polies, ses Côtes de Genève et son rotor en or 21 carats orné d’une croix de Calatrava gravée.
-</p>
+	</title>
 </head>
 
 
@@ -369,7 +211,7 @@ montre ne s’arrêtera pas grâce à la rotation du support et vous n’aurez d
 		<p>La précision d’une montre se mesure à sa régularité. Un mouvement qui avance ou retarde est exact si cette avance ou ce retard journalier est constant. Cet écart peut être aisément corrigé. Le dernier test que devra subir votre montre sera celui de son fonctionnement à votre poignet. Les variations de position, de température ou de pression, les champs magnétiques (tels que ceux générés par la plupart des équipements électroniques, portiques de sécurité ou appareils électroménagers), les vibrations et bien d’autres facteurs peuvent affecter la précision. Si vous deviez constater un tel dérèglement, n’hésitez pas à déposer votre montre chez un détaillant agréé Patek Philippe ou dans un centre de service agréé, qui prendra les mesures nécessaires pour régler votre garde-temps selon vos exigences.</p>
 	</section>
 	<section class="main-section" id="étanchéité">
-		<header id="étanchéité">
+		<header id="etanche">
 			<h3>étanchéité</h3>
 		</header>
 		<p>Votre montre est dotée de joints et de fermetures conçus pour protéger le mouvement de la poussière, de l'humidité et de tout risque de détérioration en cas d'immersion. Nous vous suggérons toutefois d'éviter qu'elle n'entre en contact avec l'eau si elle est munie d'un bracelt en cuir.</p>
